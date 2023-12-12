@@ -221,6 +221,9 @@ nc {-options} [hostname] [port]
 UDP기반 멀티플랙싱 코드다 하면 어떤 내용을 채워야 할지
 ![udp클라이](https://github.com/geniusBrainLsm/socket_programming/assets/87559232/22f2b9ed-75be-42c6-8b53-42cb63726b77)
 
-![Uploading 스크린샷 2023-12-12 오전 10.06.52.png…]()
+모니터링 대상과 타임아웃이 동일하다면 검사할 FD와 타임아웃에 대해 재설정 필요가 없다.
 
+![select](https://github.com/geniusBrainLsm/socket_programming/assets/87559232/b6fd9893-542b-48d4-94a1-ffa01d48ffe5)
+
+![poll](https://github.com/geniusBrainLsm/socket_programming/assets/87559232/616893e6-abcd-47f8-8bfc-ade0542506da)
 
