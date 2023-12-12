@@ -10,6 +10,7 @@
 ## StroyBoard Entry Point -> 첫화면에 나오는 왼쪽화살표. 진입점임. 이게 없으면 검은화면나옴
 
 ## Action으로 만든 함수들을 보면, (_ sender: UIButton) 이렇게 나오는데 이거뭐냐. 함수 전에 나왔던거
+외부 매개변수를 생략한거다(4주차)
 
 ##    @IBOutlet weak var webView: WKWebView! 마지막꺼는 자료형이고, 느낌표는 옵셔널임. 옵셔널푸는거아님 이거의 장점?
 
@@ -66,3 +67,23 @@ var x1 : Int?
 if let xx = x1 { //옵셔널 변수 x1이 값이 없어서 if문의 조건이 거짓이 되어 if문 실행하지 않고 else로 감 } print(xx)
 else {
 } print("nil")
+
+## 여러개 옵셔널 언래핑.
+
+## 느낌표로 언래핑
+implicitly Unwrapping optional
+자동으로 언래핑을 하는 옵셔널 자료형 ->!
+
+3주차 15페이지 예제
+약간 위험할수있는데 왜 엑스코드에서는 !를 쓰냐? 확신이 있다고 함..
+!? 차이
+
+argument, parameter 차이
+
+함수는 걍 다보기
+매우중요라고 써있는거 보기
+
+클래스도.
+..
+그냥 다하셈
+
