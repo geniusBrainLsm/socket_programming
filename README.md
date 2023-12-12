@@ -83,7 +83,49 @@ argument, parameter 차이
 함수는 걍 다보기
 매우중요라고 써있는거 보기
 
+failable initializer 로 만든 프로퍼티는 옵셔널로나옴,. 그래서 그걸 풀어야함.
+guard let url = URL(string:urlString) else {
+    print("invaild URL");
+}
+
 클래스도.
 ..
 그냥 다하셈
 
+여기는 10- 14주차자료
+![스크린샷 2023-12-12 오후 12 14 40](https://github.com/geniusBrainLsm/socket_programming/assets/87559232/466ebbab-6fff-48b8-b9f8-262bd01727ba)
+이거 가드문으로 해보기
+뜬금없이 !가 나오는 부분 부자연스럽기떄문에..
+
+그리고 31페이지
+
+더블은 구조체인데 그 안에 스트링이 들어가면 nil이 들어가야하기 떄문에 더블형에 문자가 들어가면 옵셔널로 튀어나옴.
+그래서 !가 두번쓰임. forced unwrapping을 2번한거임.
+
+let weight = Double(txtWeight.text!)!
+let height = Double(txtHeight.text!)!
+let bmi = weight / (heightheight0.0001) // kg/m*m 이걸 보다 안전한 옵셔널 바인딩 두가지방법으로
+
+이상민의 어시스턴트
+GPT-4
+옵셔널 바인딩을 사용하여 안전하게 값을 얻어올 수 있습니다. 다음은 두 가지 방법입니다.
+
+if let을 사용한 옵셔널 바인딩:
+swift
+if let weight = Double(txtWeight.text!), let height = Double(txtHeight.text!) {
+    let bmi = weight / (height * height * 0.0001)
+    // 여기서 bmi를 사용합니다.
+} else {
+    // 변환에 실패했을 때의 처리를 작성합니다.
+}
+guard let을 사용한 옵셔널 바인딩:
+swift
+guard let weight = Double(txtWeight.text!), let height = Double(txtHeight.text!) else {
+    // 변환에 실패했을 때의 처리를 작성하고 함수나 메소드를 빠져나갑니다.
+    return
+}
+let bmi = weight / (height * height * 0.0001)
+// 여기서 bmi를 사용합니다.
+
+
+if let 보다 guard let을 더 많이쓰는이유? -> 가독성면에서 좋음. 다른건 찾아보기
